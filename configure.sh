@@ -252,8 +252,8 @@ generate_ansible_host_secrets() {
             printf "kind: Secret\n"
             printf "ansible_user: %s\n" "${!node_username}"
             printf "ansible_become_pass: %s\n" "${!node_password}"
-        } > "${PROJECT_DIR}/provision/ansible/inventory/host_vars/k8s-${node_id}.sops.yml"
-        sops --encrypt --in-place "${PROJECT_DIR}/provision/ansible/inventory/host_vars/k8s-${node_id}.sops.yml"
+        } > "${PROJECT_DIR}/provision/ansible/inventory/host_vars/tom-${node_id}.sops.yml"
+        sops --encrypt --in-place "${PROJECT_DIR}/provision/ansible/inventory/host_vars/tom-${node_id}.sops.yml"
     done
 }
 
@@ -269,7 +269,7 @@ generate_ansible_hosts() {
             node_id=$(echo "${var}" | awk -F"_" '{print $5}')
             node_control="BOOTSTRAP_ANSIBLE_CONTROL_NODE_${node_id}"
             if [[ "${!node_control}" == "true" ]]; then
-                printf "        k8s-%s:\n" "${node_id}"
+                printf "        tom-%s:\n" "${node_id}"
                 printf "          ansible_host: %s\n" "${!var}"
             else
                 worker_node_count=$((worker_node_count+1))
@@ -282,7 +282,7 @@ generate_ansible_hosts() {
                 node_id=$(echo "${var}" | awk -F"_" '{print $5}')
                 node_control="BOOTSTRAP_ANSIBLE_CONTROL_NODE_${node_id}"
                 if [[ "${!node_control}" == "false" ]]; then
-                    printf "        k8s-%s:\n" "${node_id}"
+                    printf "        tom-%s:\n" "${node_id}"
                     printf "          ansible_host: %s\n" "${!var}"
                 fi
             done
