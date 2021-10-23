@@ -15,6 +15,11 @@ spec:
         name: k8s-at-home-charts
         namespace: flux-system
       interval: 5m
+  image:
+    repository: ghcr.io/linuxserver/tvheadend
+    version: "version-eb59284b"
+  env:
+    TZ: "Americal/Detoit"
   values:
     ingress:
       main:
