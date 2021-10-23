@@ -51,14 +51,10 @@ spec:
       config:
         enabled: true
         existingClaim: sonarr-config
-      media:
+      downloads:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "gypsy.lan"
-            path: /pool/storage-0/media
-        mountPath: /media
+        existingClaim: nfs-download-media
+        mountPath: /mnt/storage/downloads
     resources:
       requests:
         memory: 250Mi
