@@ -28,7 +28,7 @@ spec:
         annotations:
           hajimari.io/enable: "true"
           hajimari.io/icon: "television-box"
-          traefik.ingress.kubernetes.io/router.entrypoint: "websecure"
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
         hosts:
           - host: "sonarr.${SECET_DOMAIN}"
             paths:
