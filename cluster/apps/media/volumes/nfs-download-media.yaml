@@ -27,7 +27,7 @@ metadata:
   name: nfs-download-media
   namespace: media
 spec:
-  storageClassName: nfs-downloads-media
+  storageClassName: nfs-download-media
   resources:
     requests:
       storage: 1Mi
