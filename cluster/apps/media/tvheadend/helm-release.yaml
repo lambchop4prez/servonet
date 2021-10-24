@@ -41,7 +41,7 @@ spec:
 
     resources:
       requests:
-        memor: 2Gi
+        memory: 2Gi
         cpu: 1
     
     affinity:
