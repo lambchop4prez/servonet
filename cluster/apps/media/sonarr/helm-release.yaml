@@ -58,7 +58,7 @@ spec:
           nfs:
             server: "gypsy"
             path: /pool/storage-0/media
-          mountPath: /media
+        mountPath: /media
     resources:
       requests:
         memory: 250Mi
