@@ -31,13 +31,13 @@ spec:
           hajimari.io/icon: "television-box"
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
         hosts:
-          - host: "tvheadend.${SECRET_CLUSTER_DOMAIN}"
+          - host: "tvheadend.${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - hosts:
-            - "tvheadend.${SECRET_CLUSTER_DOMAIN}"
+            - "tvheadend.${SECRET_DOMAIN}"
 
     resources:
       requests:
