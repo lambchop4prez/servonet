@@ -39,6 +39,22 @@ spec:
           - hosts:
             - "tvheadend.${SECRET_DOMAIN}"
             secretName: tvheadendcert
+    persistence:
+      config:
+        enabled: true
+        existingClaim: tvheadend-config
+      recordings:
+        enabled: true
+        type: custom
+        volumeSpec:
+          nfs:
+            server: "gypsy"
+            path: /pool/storage-0/media/recordings
+        mountPath: /recordings
+      dvb:
+        enabled: true
+        hostPath: /dev/dvb
+        mountPath: /dev/dvb
     resources:
       requests:
         memory: 2Gi
