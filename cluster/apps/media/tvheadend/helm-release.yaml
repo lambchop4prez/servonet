@@ -50,6 +50,4 @@ spec:
           nodeSelectorTerms:
             - matchExpressions:
               - key: feature.node.kubernetes.io/external-dvb-device
-                operator: In
-                values:
-                  - true
+                operator: Exists
