@@ -62,7 +62,7 @@ spec:
           nfs:
             server: "gypsy"
             path: /pool/storage-0/media/config/sonarr
-        mountPath: /media
+        mountPath: /config
       media:
         enabled: true
         type: custom
