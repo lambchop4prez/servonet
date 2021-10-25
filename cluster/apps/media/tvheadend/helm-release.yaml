@@ -53,8 +53,10 @@ spec:
         mountPath: /recordings
       dvb:
         enabled: true
+        type: "hostPath"
         hostPath: /dev/dvb
         mountPath: /dev/dvb
+    
     resources:
       requests:
         memory: 2Gi
