@@ -21,6 +21,8 @@ spec:
       version: "version-eb59284b"
     env:
       TZ: "Americal/Detoit"
+    securityContext:
+      privileged: true
     ingress:
       main:
         enabled: true
