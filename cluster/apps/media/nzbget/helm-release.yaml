@@ -41,8 +41,9 @@ spec:
             - "nzbget.${SECRET_DOMAIN}"
             secretName: nzbget-cert
     podSecurityContext:
-      supplementalGroups:
-        - 100
+      runAsUser: 1000
+      runAsGroup: 1001
+      fsGroup: 1001
     metrics:
       enabled: true
       serviceMonitor:
@@ -53,7 +54,12 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: nzbget-config
+        type: custom
+        volumeSpec:
+          nfs:
+            server: "gypsy"
+            path: /pool/storage-0/media/config/nzbget
+        mountPath: /config
       media:
         enabled: true
         type: custom
