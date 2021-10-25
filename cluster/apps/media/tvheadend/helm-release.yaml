@@ -24,6 +24,12 @@ spec:
       TZ: "Americal/Detoit"
     securityContext:
       privileged: true
+    service:
+      main:
+        ports:
+          htsp:
+            enabled: true
+        type: LoadBalancer
     ingress:
       main:
         enabled: true
