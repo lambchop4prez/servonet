@@ -40,8 +40,10 @@ spec:
             - "sonarr.${SECRET_DOMAIN}"
             secretName: sonarr-cert
     podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1001
       supplementalGroups:
-        - 100
+        - 1001
     metrics:
       enabled: true
       serviceMonitor:
