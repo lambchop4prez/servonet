@@ -40,6 +40,7 @@ spec:
             - "sonarr.${SECRET_DOMAIN}"
             secretName: sonarr-cert
     podSecurityContext:
+      fsGroup: 1001
       supplementalGroups:
         - 1001
     metrics:
