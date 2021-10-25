@@ -57,7 +57,12 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: sonarr-config
+        type: custom
+        volumeSpec:
+          nfs:
+            server: "gypsy"
+            path: /pool/storage-0/media/config/sonarr
+        mountPath: /media
       media:
         enabled: true
         type: custom
