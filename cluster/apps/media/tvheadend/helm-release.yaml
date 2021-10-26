@@ -29,8 +29,9 @@ spec:
         ports:
           htsp:
             enabled: true
-          http:
-            enabled: true
+        type: LoadBalancer
+        loadBalancerIP: 10.4.99.124
+        externalTrafficPolicy: Local
     ingress:
       main:
         enabled: true
