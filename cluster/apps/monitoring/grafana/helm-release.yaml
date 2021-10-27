@@ -49,7 +49,7 @@ spec:
             disableDeletion: false
             editable: true
             options:
-              path: /var/llib/grafana/dashboards/default
+              path: /var/lib/grafana/dashboards/default
     datasources:
       datasources.yaml:
         apiVersion: 1
@@ -59,7 +59,7 @@ spec:
             access: proxy
             url: "https://prometheus.${SECRET_DOMAIN}"
             isDefault: true
-    dashboards:
+    kudashboards:
       default:
         flux-cluster:
           url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/cluster.json
