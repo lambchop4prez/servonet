@@ -58,7 +58,6 @@ spec:
             type: prometheus
             access: proxy
             url: "https://prometheus.${SECRET_DOMAIN}"
-            isDefault: true
     dashboards:
       default:
         flux-cluster:
