@@ -57,22 +57,22 @@ spec:
           - name: Prometheus
             type: prometheus
             access: proxy
-            url: "http://prometheus.${SECRET_DOMAIN}"
+            url: "https://prometheus.${SECRET_DOMAIN}"
             isDefault: true
     dashboards:
       default:
         flux-cluster:
-        url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/cluster.json
-        datasource: Prometheus
-      flux-control-plane:
-        url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/control-plane.json
-        datasource: Prometheus
-      radarr:
+          url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/cluster.json
+          datasource: Prometheus
+        flux-control-plane:
+          url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/control-plane.json
+          datasource: Prometheus
+        radarr:
           url: https://raw.githubusercontent.com/k8s-at-home/grafana-dashboards/main/radarr.json
           datasource: Prometheus
-      sonarr:
-        url: https://raw.githubusercontent.com/k8s-at-home/grafana-dashboards/main/sonarr.json
-        datasource: Prometheus
+        sonarr:
+          url: https://raw.githubusercontent.com/k8s-at-home/grafana-dashboards/main/sonarr.json
+          datasource: Prometheus
     sidecar:
       dashboards:
         enabled: true
