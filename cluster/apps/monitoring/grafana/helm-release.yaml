@@ -73,13 +73,13 @@ spec:
         sonarr:
           url: https://raw.githubusercontent.com/k8s-at-home/grafana-dashboards/main/sonarr.json
           datasource: Prometheus
-    sidecar:
-      dashboards:
-        enabled: true
-        searchNamespaces: ALL
-      datasources:
-        enabled: true
-        searchNamespaces: ALL
+    # sidecar:
+    #   dashboards:
+    #     enabled: true
+    #     searchNamespaces: ALL
+    #   datasources:
+    #     enabled: true
+    #     searchNamespaces: ALL
     plugins:
       - grafana-worldmap-panel
       - grafana-clock-panel
