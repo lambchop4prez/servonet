@@ -52,12 +52,7 @@ spec:
     persistence:
       config:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "gypsy"
-            path: /pool/storage-0/media/config/home-assistant
-        mountPath: /config
+        existingClaim: home-assistant-config
     resources:
       requests:
         memory: 250Mi
