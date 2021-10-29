@@ -73,6 +73,10 @@ spec:
         sonarr:
           url: https://raw.githubusercontent.com/k8s-at-home/grafana-dashboards/main/sonarr.json
           datasource: Prometheus
+        speedtest:
+          gnetId: 13665
+          revision: 1
+          datasource: Prometheus
     sidecar:
       dashboards:
         enabled: true
