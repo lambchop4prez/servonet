@@ -22,7 +22,6 @@ spec:
       tag: 2021.10.6
     env:
       TZ: "America/Detroit"
-    hostNetwork: true
     dnsPolicy: ClusterFirstWithHostNet
     ingress:
       main:
