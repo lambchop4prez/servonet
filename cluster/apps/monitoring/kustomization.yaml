@@ -5,3 +5,5 @@ resources:
   - grafana
   - speedtest-exporter
   - kube-prometheus-stack
+  - promtail
+  - loki
