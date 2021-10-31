@@ -22,6 +22,9 @@ spec:
       tag: 2021.10.6
     env:
       TZ: "America/Detroit"
+    envFrom:
+      - secretRef:
+          name: home-assistant-secrets
     dnsPolicy: ClusterFirstWithHostNet
     ingress:
       main:
