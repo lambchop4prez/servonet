@@ -52,7 +52,7 @@ spec:
           tag: v3.12.0
         workingDir: "/config"
         git:
-          deployKeySecret: code-server
+          deploykeySecret: code-server
         ingress:
           enabled: true
           ingressClassName: "traefik"
