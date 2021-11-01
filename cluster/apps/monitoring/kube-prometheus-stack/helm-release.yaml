@@ -23,27 +23,6 @@ spec:
         global: 
           slack_api_url: ${SECRET_ALERT_MANAGER_DISCORD_WEBHOOK}
           resolve_timeout: 5m
-        ingress:
-          enabled: true
-          pathType: Prefix
-          ingressClassName: "traefik"
-          annotations:
-            cert-manager.io/cluster-issuer: "letsencrypt-production"
-            traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          hosts:
-            - "alert-manager.${SECRET_DOMAIN}"
-          tls:
-            - hosts:
-              - "alert-manager.${SECRET_DOMAIN}"
-              secretName: "alert-manager-cert"
-        alertmanagerSpec:
-          storage:
-            volumeClaimTemplate:
-              spec:
-                storageClassName: "local-path"
-                resources:
-                  requests:
-                    storage: 10Gi
         receivers:
           - name: "null"
           - name: "discord"
@@ -82,6 +61,27 @@ spec:
             target_match:
               severity: "warning"
             equal: ["alertname", "namespace"]
+      ingress:
+        enabled: true
+        pathType: Prefix
+        ingressClassName: "traefik"
+        annotations:
+          cert-manager.io/cluster-issuer: "letsencrypt-production"
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        hosts:
+          - "alert-manager.${SECRET_DOMAIN}"
+        tls:
+          - hosts:
+            - "alert-manager.${SECRET_DOMAIN}"
+            secretName: "alert-manager-cert"
+      alertmanagerSpec:
+        storage:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: "local-path"
+              resources:
+                requests:
+                  storage: 10Gi
     nodeExporter:
       serviceMonitor:
         relabelings:
