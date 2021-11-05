@@ -97,6 +97,52 @@ spec:
       fullnameOverride: node-exporter
     grafana:
       enabled: false
+      forceDeployDashboards: true
+      sidecar:
+        dashboards:
+          multicluster:
+            etcd:
+              enabled: true
+    kubelet:
+      enabled: true
+      serviceMonitor:
+        metricRelabelings:
+          - action: replace
+            sourceLabels:
+              - node
+            targetLabel: instance
+    kubeApiServer:
+      enabled: true
+    kubeControllerManager:
+      enabled: true
+      endpoints:
+        - 10.4.88.120
+        - 10.4.88.123
+        - 10.4.88.125
+    kubeScheduler:
+      enabled: true
+      endpoints:
+        - 10.4.88.120
+        - 10.4.88.123
+        - 10.4.88.125
+    kubeProxy:
+      enabled: true
+      endpoints:
+        - 10.4.88.120
+        - 10.4.88.123
+        - 10.4.88.125
+    kubeEtcd:
+      enabled: true
+      endpoints:
+        - 10.4.88.120
+        - 10.4.88.123
+        - 10.4.88.125
+      service:
+        enabled: true
+        port: 2381
+        targetPort: 2381
+    prometheusOperator:
+      configReloaderCpu: 0
     prometheus:
       ingress:
         enabled: true
