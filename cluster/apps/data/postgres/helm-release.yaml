@@ -22,9 +22,17 @@ spec:
       tag: 13.4.0
     postgresqlUsername: ${SECRET_POSTGRES_USERNAME}
     postgressPassword: ${SECRET_POSTGRES_PASSWORD}
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1002
+      fsGroup: 1002
     persistence:
       enabled: true
-      existingClaim: postgress-data
+      type: custom
+      volumeSpec:
+        nfs:
+          server: "gypsy"
+          path: /pool/storage-0/data/postgress
     # metrics:
     #   enabled: true
     #   serviceMonitor:
