@@ -1,0 +1,35 @@
+kind: Secret
+ansible_user: ENC[AES256_GCM,data:peW1,iv:VD62GnipdHEyeZlvmQpdWLIY7gbmCufnZVYzyGckW74=,tag:b0S6LhvDYwWkXvis25Yl2g==,type:str]
+ansible_become_pass: ENC[AES256_GCM,data:TY7478P57zopINM7gKPy9hF3utk=,iv:fECB8VZy4z1cze1Dss8kQnKIksCTn6pG3+PmXoF3aik=,tag:XtpJnjh8l9IMhEHTcmXwYA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-11-05T00:28:50Z"
+    mac: ENC[AES256_GCM,data:JA9VHOB7GZUDSM/acdWYnPO66hbbxniRcgczEzUOi/rTsViGCLHLnR3X/GihTbvQf5yp1YaLxzmWqE9tCfF86laL6c1oCP/IU0kVyXHcb+qq4/+53kX++zvD259sAKe3Xb+mn1XeIMAzmtBLl51SMkJ+9WDqNpTMXUdwkXBHCTA=,iv:nX4m3lf5uNwVhY9hy2w1mUtly+Me2BgUfv+F3m15t5I=,tag:7jwRE3dVoqOsbmKInFhCWA==,type:str]
+    pgp:
+        - created_at: "2021-11-05T00:28:49Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA8q/csSOs+7rARAAvux/GoxbeB3aQvcJ1oCVxEBbs2Y7/5VWhSzD1SlMWlov
+            thLzhukVKi9VIwD39piaVo2k91k0kg1KmOLjNFjlgjho6ITMlPsBkwTdYmYJLI1g
+            kchfxgJOaf2OEGLr2pj8bae5iq0TB1hCYmyimSOM64v3BuWcL/vaHIBvep5hI+Yi
+            fHAOUyoK9vvt5KwOeRWBksgEkfV8CWkllWKtCAC/j8j3UIvu9WuXvp1vgzYy4Rbr
+            tlXy+DMfLvYs/4UmqRc6HmV1yghZ8nSLMVW8jLVfd8foI+cnrw3rs0YMROy4aesj
+            N/ZAKGqGeMu894UcIQXlDT5gPnTaYKz6ZgOBw5qTRs9HiMzqiTCz4kCu2sBqUErm
+            gVubMZ+syw1x4Aw9WSl/SztSG9nP3FlYxnPqy50Bonqgotal7wp1MpmeUMvB+2pw
+            37/Eo7A+jy/k/jf5KZ/IBcwaMW3cL7I5WDjdFztUa7se5tIm34+2iUzzjcrtmT1E
+            7JcwQmmKkMbEe/c3bsBel8l11NGTGsyVCtOCut8b/Ov7keSeKDMO1t8wk9JFjAVz
+            q/52p7mZYU7RYv7B+FpIx3IOg54ZUoSplEj+VfZVftuO0/bqmucwc0/MPk18JR5C
+            Jkm/z6G3eJrl3/rCMXc6Maeu0jGypNpa7LlgdMOEcbmuaNw9/veIMvlJblsBf6LU
+            aAEJAhVwHL7gmkqKASayeTX6G2fJmj3iPBbHDuEcSKAHmA3M3QKaXS9Lfli9mk8w
+            BqBvN+BgAq5j5YHSEnueseoAxhVVMWwOBYTtPYBScvjx5h8Jv1hC8270ExCmAnT7
+            aLpBgVI9KqOb
+            =vO6u
+            -----END PGP MESSAGE-----
+          fp: 68A86A952C39741BA73F23318E6EE8B38327DF74
+    unencrypted_regex: ^(kind)$
+    version: 3.7.1
