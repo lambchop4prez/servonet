@@ -20,8 +20,7 @@ spec:
     image:
       repository: bitnami/postgresql
       tag: 13.4.0
-    postgresqlUsername: ${SECRET_POSTGRES_USERNAME}
-    postgresqlPassword: ${SECRET_POSTGRES_PASSWORD}
+    postgresqlPostgresPassword: ${SECRET_POSTGRES_PASSWORD}
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1002
@@ -32,7 +31,7 @@ spec:
       volumeSpec:
         nfs:
           server: "gypsy"
-          path: /pool/storage-0/data/postgress
+          path: /pool/storage-0/data/postgres
     # metrics:
     #   enabled: true
     #   serviceMonitor:
