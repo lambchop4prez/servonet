@@ -20,7 +20,8 @@ spec:
     image:
       repository: bitnami/postgresql
       tag: 13.4.0
-    postgresqlPostgresPassword: ${SECRET_POSTGRES_PASSWORD}
+    postgresql:
+      postgresPassword: ${SECRET_POSTGRES_PASSWORD}
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1002
