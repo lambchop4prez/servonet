@@ -28,11 +28,7 @@ spec:
       fsGroup: 1002
     persistence:
       enabled: true
-      type: custom
-      volumeSpec:
-        nfs:
-          server: "gypsy"
-          path: /pool/storage-0/data/postgres
+      existingClaim: postgres-data
     # metrics:
     #   enabled: true
     #   serviceMonitor:
