@@ -24,7 +24,6 @@ spec:
       postgresPassword: ${SECRET_POSTGRES_PASSWORD}
     containerSecurityContext:
       enabled: true
-      runAsUser: 1000
       runAsGroup: 1002
     persistence:
       enabled: true
