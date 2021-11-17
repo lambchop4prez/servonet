@@ -26,7 +26,6 @@ spec:
       enabled: true
       runAsUser: 1000
       runAsGroup: 1002
-      fsGroup: 1002
     persistence:
       enabled: true
       existingClaim: postgres-data
