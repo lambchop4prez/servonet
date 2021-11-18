@@ -20,8 +20,7 @@ spec:
     image:
       repository: bitnami/postgresql
       tag: 13.4.0
-    postgresql:
-      postgresPassword: ${SECRET_POSTGRES_PASSWORD}
+    postgresqlPostgresPassword: ${SECRET_POSTGRES_PASSWORD}
     volumePermissions:
       enabled: true
     persistence:
