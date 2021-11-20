@@ -27,9 +27,9 @@ spec:
           - name: "null"
           - name: "discord"
             slack_configs:
-              - channel: "#prometheus"
+              - channel: "#general"
                 icon_url: https://avatars3.githubusercontent.com/u/3380462
-                username: "Prometheus"
+                username: "alert-manager"
                 send_resolved: true
                 title: |-
                   [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if ne .CommonAnnotations.summary ""}}{{ .CommonAnnotations.summary }}{{ else }}{{ .CommonLabels.alertname }}{{ end }}
