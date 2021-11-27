@@ -121,8 +121,8 @@ spec:
         - 10.4.88.125
       service:
         enabled: true
-        port: 10252
-        targetPort: 10252
+        port: 10257
+        targetPort: 10257
       serviceMonitor:
         enabled: true
         https: true
