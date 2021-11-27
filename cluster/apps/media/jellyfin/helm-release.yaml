@@ -54,7 +54,12 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: jellyfin-config
+        type: custom
+        volumeSpec:
+          nfs:
+            server: "gypsy"
+            path: /pool/storage-0/media/config/jellyfin
+        mountPath: /config
       media:
         enabled: true
         type: custom
