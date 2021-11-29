@@ -136,7 +136,7 @@ spec:
       service:
         enabled: true
         port: 10259
-        targetPort: 10295
+        targetPort: 10259
       serviceMonitor:
         enabled: true
         https: true

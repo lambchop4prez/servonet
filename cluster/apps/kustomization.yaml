@@ -5,7 +5,7 @@ resources:
   - kube-system
   - networking
   - system-upgrade
-  - data
+  #- data # needs x86 nodes
   - monitoring
   - media
   - home
