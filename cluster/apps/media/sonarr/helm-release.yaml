@@ -57,6 +57,8 @@ spec:
     probes:
       liveness:
         enabled: false
+      readiness:
+        enabled: false
     persistence:
       config:
         enabled: true
