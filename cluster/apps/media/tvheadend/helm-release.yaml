@@ -70,7 +70,7 @@ spec:
     
     resources:
       requests:
-        memory: 2Gi
+        memory: 200Mi
         cpu: 1
     
     affinity:
