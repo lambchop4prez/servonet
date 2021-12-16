@@ -8,3 +8,4 @@ resources:
   - networking.yaml
   - home.yaml
   - data.yaml
+  - rook-ceph.yaml
