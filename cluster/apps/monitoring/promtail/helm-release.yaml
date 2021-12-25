@@ -21,7 +21,7 @@ spec:
       registry: ghcr.io
       repository: k8s-at-home/promtail
     config:
-      lokiAddress: http://loki:3100/loki/api/v1/pus
+      lokiAddress: http://loki:3100/loki/api/v1/
     extraVolumes:
       - name: journal
         hostPath:
