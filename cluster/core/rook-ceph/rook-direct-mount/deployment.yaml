@@ -58,9 +58,9 @@ spec:
         - name: mon-endpoint-volume
           configMap:
             name: rook-ceph-mon-endpoints
-              items:
-                - key: data
-                  path: mon-endpoints
+            items:
+              - key: data
+                path: mon-endpoints
         - name: direct-mount-scripts
           projected:
             defaultMode: 0775
