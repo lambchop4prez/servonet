@@ -1,34 +1,4 @@
 ---
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: nfs-data
-provisioner: nfs
-reclaimPolicy: Retain
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: postgres-data-pv
-  namespace: data
-spec:
-  capacity:
-    storage: 100Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: nfs-data
-  claimRef:
-    name: postgres-data
-    namespace: data
-  mountOptions:
-    - hard
-    - nfsvers=4.1
-  nfs:
-    path: /pool/storage-0/data/postgres
-    server: "gypsy"
----
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -40,3 +10,4 @@ spec:
   resources:
     requests:
       storage: 10Gi
+  storageClassName: local-path
