@@ -21,7 +21,7 @@ spec:
       repository: ghcr.io/k8s-at-home/tt-rss
       tag: "v1.8723.0"
     env:
-      TTRSS_DB_HOST: postgres-primary
+      TTRSS_DB_HOST: postgres
       TTRSS_DB_NAME: tinytinyrss
       TTRSS_DB_PASS: ${SECRET_TINY_PASSWORD}
       TTRSS_DB_USER: tiny
