@@ -28,8 +28,6 @@ spec:
   nfs:
     path: /pool/storage-0/data/postgres
     server: "gypsy"
-
-
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

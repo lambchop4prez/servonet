@@ -17,6 +17,7 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    fullnameOverride: postgres
     image:
       repository: bitnami/postgresql
       tag: 13.4.0
@@ -26,13 +27,13 @@ spec:
     persistence:
       enabled: true
       existingClaim: postgres-data
-    # metrics:
-    #   enabled: true
-    #   serviceMonitor:
-    #     enabled: true
-    #     interval: 5m
-    #   prometheusRule:
-    #     enabled: true
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        interval: 5m
+      prometheusRule:
+        enabled: true
     primary:
       affinity:
         nodeAffinity:
@@ -43,3 +44,5 @@ spec:
                   operator: In
                   values:
                     - amd64
+      service:
+        type: ClusterIP
