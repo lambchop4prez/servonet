@@ -42,8 +42,8 @@ spec:
               name: libmodules
             - mountPath: /etc/rook
               name: mon-endpoint-volume
-            - mountPath: /scripts
-              name: direct-mount-scripts
+            # - mountPath: /scripts
+            #   name: direct-mount-scripts
       hostNetwork: true
       volumes:
         - name: dev
@@ -61,9 +61,9 @@ spec:
             items:
               - key: data
                 path: mon-endpoints
-        - name: direct-mount-scripts
-          projected:
-            defaultMode: 0775
-            sources:
-              - configMap:
-                  name: direct-mount-scripts
+        # - name: direct-mount-scripts
+        #   projected:
+        #     defaultMode: 0775
+        #     sources:
+        #       - configMap:
+        #           name: direct-mount-scripts
