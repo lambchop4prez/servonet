@@ -48,16 +48,16 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
-          - name: "tom-3"
+          - name: "tom-3.servo.lan"
             devices:
               - name: "sdb"
-          - name: "tom-4"
+          - name: "tom-4.servo.lan"
             devices:
               - name: "sdb"
-          - name: "tom-5"
+          - name: "tom-5.servo.lan"
             devices:
               - name: "sdb"
-          - name: "tom-6"
+          - name: "tom-6.servo.lan"
             devices:
               - name: "sdb"
     cephBlockPools:
