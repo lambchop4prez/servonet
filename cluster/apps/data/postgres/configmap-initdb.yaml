@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: initdb
+  namespace: data
+data:
+  01_Setup_tt-rss.sql: |-
+    CREATE DATABASE tinytinyrss;
+
+    CREATE ROLE tiny WITH LOGIN PASSWORD '${SECRET_TINY_PASSWORD}';
+
+    GRANT CONNECT ON DATABASE tinytinyrss TO tiny;
+
+    GRANT ALL ON SCHEMA public TO tiny;
+
+    ALTER ROLE tiny SET lock_timeout TO '10s';

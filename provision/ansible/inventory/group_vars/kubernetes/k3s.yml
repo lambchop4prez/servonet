@@ -5,7 +5,7 @@
 #
 
 # (string) Use a specific version of k3s
-k3s_release_version: "v1.21.5+k3s1"
+k3s_release_version: "v1.22.3+k3s1"
 
 # (bool) Install using hard links rather than symbolic links.
 k3s_install_hard_links: true
@@ -29,6 +29,10 @@ k3s_registration_address: "{{ kubevip_address }}"
 k3s_server_manifests_urls:
   - url: https://docs.projectcalico.org/archive/v3.21/manifests/tigera-operator.yaml
     filename: tigera-operator.yaml
+  - url: https://docs.projectcalico.org/archive/v3.21/manifests/custom-resources.yaml
+    filename: custom-resources.yaml
+  # - url: https://docs.projectcalico.org/manifests/calico.yaml
+  #   filename: calico.yaml
 
 # (list) A flat list of templates to deploy on the primary control plane
 # /var/lib/rancher/k3s/server/manifests
