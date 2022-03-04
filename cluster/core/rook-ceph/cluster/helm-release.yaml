@@ -42,22 +42,24 @@ spec:
         enabled: true
         urlPrefix: /
         ssl: false
+      network:
+        provider: host
       storage:
         useAllNodes: false
         useAllDevices: false
         config:
           osdsPerDevice: "1"
         nodes:
-          - name: "tom-3.servo.lan"
+          - name: "tom-3"
             devices:
               - name: "sdb"
-          - name: "tom-4.servo.lan"
+          - name: "tom-4"
             devices:
               - name: "sdb"
-          - name: "tom-5.servo.lan"
+          - name: "tom-5"
             devices:
               - name: "sdb"
-          - name: "tom-6.servo.lan"
+          - name: "tom-6"
             devices:
               - name: "sdb"
     cephBlockPools:
