@@ -1,14 +1,34 @@
 ---
 apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: influx-data
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: nfs-influx-data
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /pool/storage-0/data/influxdb
+    server: gypsy.lan
+
+---
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: influxdb-storage
+  name: influxdb-data
   namespace: monitoring
 spec:
   resources:
     requests:
       storage: 10Gi
   volumeMode: Filesystem
-  storageClassName: local-path
+  storageClassName: nfs-influx-data
   accessModes:
     - ReadWriteOnce
