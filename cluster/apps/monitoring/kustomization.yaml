@@ -6,4 +6,5 @@ resources:
   - speedtest-exporter
   - kube-prometheus-stack
   - promtail
-  - loki
+  #- loki
+  - influxdb
