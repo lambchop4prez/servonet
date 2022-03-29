@@ -36,3 +36,5 @@ spec:
           secretName: loki-cert
     serviceMonitor:
       enabled: true
+    config:
+      
