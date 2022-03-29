@@ -21,7 +21,7 @@ spec:
       tag: "1.8.10-alpine"
     persistence:
       enabled: true
-      existing-claim: influxdb-storage
+      existing-claim: influxdb-data
     setDefaultUser:
       enabled: true
       user:
