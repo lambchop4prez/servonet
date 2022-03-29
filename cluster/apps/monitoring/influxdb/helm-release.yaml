@@ -21,10 +21,7 @@ spec:
       tag: "1.8.10-alpine"
     persistence:
       enabled: true
-      volumeSpec:
-        nfs:
-          server: "gypsy"
-          path: /pool/storage-0/data/influxdb
+      existingClaim: influxdb-data
     setDefaultUser:
       enabled: true
       user:
