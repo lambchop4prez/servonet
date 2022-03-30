@@ -32,17 +32,12 @@ spec:
         password: ${SECRET_INFLUX_ADMIN_PASSWORD}
     ingress:
       enabled: true
-      pathType: Prefix
-      ingressClassName: "traefik"
+      className: "traefik"
       annotations:
         cert-manager.io/cluster-issuer: "letsencrypt-production"
         traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-      hosts:
-        - "influx.${SECRET_DOMAIN}"
-      tls:
-        - hosts:
-          - "influx.${SECRET_DOMAIN}"
-          secretName: influx-cert
+      hostname: "influx.${SECRET_DOMAIN}"
+      secretName: influx-cert
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
