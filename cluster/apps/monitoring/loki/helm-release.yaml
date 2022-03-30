@@ -37,4 +37,3 @@ spec:
     serviceMonitor:
       enabled: true
     config:
-      

@@ -28,7 +28,7 @@ spec:
           - networking
           - media
       name: "you"
-      
+
       groups:
         - name: Communicate
           links:

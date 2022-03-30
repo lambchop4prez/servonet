@@ -67,12 +67,12 @@ spec:
         type: "hostPath"
         hostPath: /dev/dvb
         mountPath: /dev/dvb
-    
+
     resources:
       requests:
         memory: 200Mi
         cpu: 1
-    
+
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:

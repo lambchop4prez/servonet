@@ -40,7 +40,7 @@ spec:
         tls:
           - hosts:
             - "esphome.${SECRET_DOMAIN}"
-            secretName: esphome-cert  
+            secretName: esphome-cert
     metrics:
       enabled: true
       serviceMonitor:

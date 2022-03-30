@@ -42,4 +42,3 @@ spec:
     persistence:
       enabled: true
       existingClaim: pgadmin-config
-

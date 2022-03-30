@@ -5,4 +5,3 @@ resources:
   - pvc.yaml
   - configmap-initdb.yaml
   - helm-release.yaml
-
