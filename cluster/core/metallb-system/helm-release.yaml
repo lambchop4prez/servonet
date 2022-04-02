@@ -17,11 +17,20 @@ spec:
         namespace: flux-system
   values:
     configInline:
+      peers:
+        - peer-address: 10.4.20.1
+          peer-asn: 64512
+          my-asn: 64512
       address-pools:
-        - name: default
+        - name: layer2
           protocol: layer2
           addresses:
             - "${METALLB_LB_RANGE}"
+        - name: default
+          protocol: bgp
+          addresses:
+            - 10.4.100.0/24
+          avoid-buggy-ips: true
     prometheus:
       podMonitor:
         enabled: true
