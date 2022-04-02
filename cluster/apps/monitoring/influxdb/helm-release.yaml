@@ -30,6 +30,9 @@ spec:
       enabled: true
       user:
         password: ${SECRET_INFLUX_ADMIN_PASSWORD}
+    service:
+      type: LoadBlancer
+      loadBalancerIP: ${METALLB_INFLUX_ADDR}
     ingress:
       enabled: true
       className: "traefik"
