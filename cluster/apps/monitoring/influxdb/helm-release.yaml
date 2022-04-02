@@ -31,7 +31,7 @@ spec:
       user:
         password: ${SECRET_INFLUX_ADMIN_PASSWORD}
     service:
-      type: LoadBlancer
+      type: LoadBalancer
       loadBalancerIP: ${METALLB_INFLUX_ADDR}
     ingress:
       enabled: true
