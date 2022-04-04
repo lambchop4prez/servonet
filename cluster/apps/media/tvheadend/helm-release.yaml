@@ -30,7 +30,7 @@ spec:
           htsp:
             enabled: true
         type: LoadBalancer
-        loadBalancerIP: 10.4.99.124
+        loadBalancerIP: ${METALLB_TVHEADEND_ADDR}
         externalTrafficPolicy: Local
     ingress:
       main:
