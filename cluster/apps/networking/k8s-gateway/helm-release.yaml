@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       # renovate: registryUrl=https://helm.traefik.io/traefik
-      chart: k8s_gateway
+      chart: k8s-gateway
       version: 1.1.6
       sourceRef:
         kind: HelmRepository
@@ -25,4 +25,7 @@ spec:
       registry: quay.io
       repository: oriedge/k8s_gateway
       tag: latest
+    service:
+      type: LoadBalancer
+      loadBalancerIP: ${METALLB_GATEWAY_ADDR}
     
