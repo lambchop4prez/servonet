@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: k8s-gateway
+  namespace: networking
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://helm.traefik.io/traefik
+      chart: k8s_gateway
+      version: 1.1.6
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-gateway
+        namespace: flux-system
+      interval: 5m
+  values:
+    domain: ${SECRET_DOMAIN}
+    watchedResources:
+      - ingress
+      - service
+    image:
+      registry: quay.io
+      repository: oriedge/k8s_gateway
+      tag: latest
+    
