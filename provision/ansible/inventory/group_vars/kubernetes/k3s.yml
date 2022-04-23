@@ -27,16 +27,20 @@ k3s_registration_address: "{{ kubevip_address }}"
 
 # (list) A list of URLs to deploy on the primary control plane. Read notes below.
 k3s_server_manifests_urls:
-  # - url: https://docs.projectcalico.org/archive/v3.21/manifests/tigera-operator.yaml
-  #   filename: tigera-operator.yaml
-  # - url: https://docs.projectcalico.org/archive/v3.21/manifests/custom-resources.yaml
-  #   filename: custom-resources.yaml
-  - url: https://docs.projectcalico.org/manifests/calico.yaml
-    filename: calico.yaml
+  - url: https://docs.projectcalico.org/archive/v3.21/manifests/tigera-operator.yaml
+    filename: tigera-operator.yaml
+  - url: https://docs.projectcalico.org/archive/v3.21/manifests/custom-resources.yaml
+    filename: custom-resources.yaml
+  # - url: https://docs.projectcalico.org/manifests/calico.yaml
+  #   filename: calico.yaml
 
 # (list) A flat list of templates to deploy on the primary control plane
 # /var/lib/rancher/k3s/server/manifests
 k3s_server_manifests_templates:
   - "calico-installation.yaml.j2"
+  - "calico-bgpconfiguration.yaml.j2"
+  - "calico-bgppeer.yaml.j2"
   - "kube-vip-rbac.yaml.j2"
   - "kube-vip-daemonset.yaml.j2"
+
+calico_external_cidr: "10.80.2.0/24"

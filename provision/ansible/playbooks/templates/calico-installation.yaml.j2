@@ -9,8 +9,11 @@ spec:
     ipPools:
       - blockSize: 26
         cidr: "{{ k3s_server['cluster-cidr'] }}"
-        encapsulation: "VXLANCrossSubnet"
+        encapsulation: "None"
         natOutgoing: Enabled
         nodeSelector: all()
+    {# nodeAddressAutodetectionV4:
+      cidrs:
+        - "10.4.88.0/16" #}
   nodeMetricsPort: 9091
   typhaMetricsPort: 9093
