@@ -5,7 +5,7 @@ metadata:
   name: cluster-settings
   namespace: flux-system
 data:
-  METALLB_LB_RANGE: 10.4.99.1-10.4.99.255
+  METALLB_LB_RANGE: 10.80.2.1-10.80.2.255
   METALLB_TRAEFIK_ADDR: 10.80.2.123
   METALLB_TVHEADEND_ADDR: 10.80.2.124
   METALLB_INFLUX_ADDR: 10.80.2.125
