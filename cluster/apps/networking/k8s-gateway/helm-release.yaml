@@ -17,7 +17,7 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    domain: servo.lan
+    domain: ${SECRET_DOMAIN}
     watchedResources:
       - ingress
       - service
