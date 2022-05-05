@@ -11,6 +11,13 @@ vars:
 env:
   KUBECONFIG: "{{.PROJECT_DIR}}/provision/kubeconfig"
 
+tasks:
+  cluster:bootstrap:
+    cmds:
+      - kubectl --kubeconfig=./provision/kubeconfig create namespace flux-system --dry-run=client -o yaml | kubectl --kubeconfig=./provision/kubeconfig apply -f -
+      - gpg --export-secret-keys --armor "${BOOTSTRAP_FLUX_KEY_FP}" | kubectl --kubeconfig=./provision/kubeconfig create secret generic sops-gpg --namespace=flux-system --from-file=sops.asc=/dev/stdin
+      
+
 includes:
   ansible: .taskfiles/ansible.yml
   flux: .taskfiles/flux.yml

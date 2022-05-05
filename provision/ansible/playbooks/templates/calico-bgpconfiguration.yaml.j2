@@ -1,5 +1,5 @@
 ---
-apiVersion: crd.projectcrd.projectcalico.org/v1
+apiVersion: crd.projectcalico.org/v1
 kind: BGPConfiguration
 metadata:
   name: default
@@ -8,5 +8,5 @@ spec:
   nodeToNodeMeshEnabled: true
   serviceClusterIPs:
     - cidr: "{{ k3s_server['service-cidr']}}"
-  serviceExternalIPs:
+  serviceLoadBalancerIPs:
     - cidr: "{{ calico_external_cidr }}"

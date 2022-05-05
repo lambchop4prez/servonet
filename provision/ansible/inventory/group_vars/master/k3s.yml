@@ -48,4 +48,6 @@ k3s_server:
   etcd-expose-metrics: true
   # Required for HAProxy health-checks
   kube-apiserver-arg:
+    # Allow k8s services to contain TCP and UDP on the same port
+    - "feature-gates=MixedProtocolLBService=true"
     - "anonymous-auth=true"
