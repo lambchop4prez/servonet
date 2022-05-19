@@ -23,6 +23,8 @@ spec:
     env:
       TZ: "America/Detroit"
       ESPHOME_DASHBOARD_USE_PING: true
+    hostNetwork: true
+    dnsPolicy: ClusterFirstWithHostNet
     ingress:
       main:
         enabled: true

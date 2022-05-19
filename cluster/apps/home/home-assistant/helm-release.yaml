@@ -32,6 +32,7 @@ spec:
         externalIps:
           - ${SVC_HOME_ASSISTANT_ADDR}
         externalTrafficPolicy: Local
+    hostNetwork: true
     ingress:
       main:
         enabled: true
