@@ -50,3 +50,9 @@ spec:
                 - pciId:
                     class: ["0300"]
                     vendor: ["8086"]
+            - name: dvb-tuner
+              matchOn:
+                - usbId:
+                    class: ["ff"]
+                    vendor: ["2040"]
+                    device: ["826d"]
