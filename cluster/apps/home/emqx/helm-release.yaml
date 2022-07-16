@@ -21,6 +21,7 @@ spec:
     replicaCount: 3
     recreatePods: true
     emqxConfig:
+      EMQX_LISTENERS__TCP__DEFAULT: true
     service:
       type: LoadBalancer
       externalIPs:
@@ -44,4 +45,4 @@ spec:
             secretName: mqqt-cert
     metrics:
     persistence:
-      
+
