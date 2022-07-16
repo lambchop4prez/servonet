@@ -22,6 +22,7 @@ spec:
     recreatePods: true
     emqxConfig:
       EMQX_LISTENERS__TCP__DEFAULT: true
+      EMQX_ADMIN_PASSWORD: ${SECRET_EMQX_ADMIN_PASSWORD}
     service:
       type: LoadBalancer
       externalIPs:
