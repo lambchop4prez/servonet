@@ -46,23 +46,10 @@ spec:
       network:
         provider: host
       storage:
-        useAllNodes: false
-        useAllDevices: false
+        useAllNodes: true
+        useAllDevices: true
         config:
           osdsPerDevice: "1"
-        nodes:
-          - name: "tom-3"
-            devices:
-              - name: "sdb"
-          - name: "tom-4"
-            devices:
-              - name: "sdb"
-          - name: "tom-5"
-            devices:
-              - name: "sdb"
-          - name: "tom-6"
-            devices:
-              - name: "sdb"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
