@@ -8,6 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
+      # renovate: registryUrl=https://repos.emqx.io/charts
       chart: emqx
       version: 5.0.3
       sourceRef:
