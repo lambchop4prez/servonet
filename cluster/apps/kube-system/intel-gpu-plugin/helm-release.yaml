@@ -8,8 +8,8 @@ metadata:
 spec:
   interval: 15m
   dependsOn:
-    name: node-feature-discovery
-    namespace: kube-system
+    - name: node-feature-discovery
+      namespace: kube-system
   chart:
     spec:
       chart: intel-gpu-plugin
