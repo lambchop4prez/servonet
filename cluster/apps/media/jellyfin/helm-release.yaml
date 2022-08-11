@@ -49,6 +49,9 @@ spec:
       runAsUser: 1000
       runAsGroup: 1001
       fsGroup: 1001
+      supplementalGroups:
+        - 44
+        - 109
     metrics:
       enabled: true
       serviceMonitor:
