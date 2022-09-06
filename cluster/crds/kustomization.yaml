@@ -7,3 +7,4 @@ resources:
   #- etcd
   - traefik
   - rook-ceph
+  - rabbitmq
