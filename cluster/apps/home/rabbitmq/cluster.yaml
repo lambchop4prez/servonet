@@ -2,7 +2,7 @@
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
-  name: definition
+  name: rabbitmq
   namespace: home
 spec:
   replicas: 3
