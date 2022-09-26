@@ -10,7 +10,7 @@ spec:
     spec:
       # renovate: registryUrl=https://prometheus-community.github.io/helm-charts
       chart: kube-prometheus-stack
-      version: 34.1.1
+      version: 40.1.2
       sourceRef:
         kind: HelmRepository
         name: prometheus-community-charts
@@ -131,7 +131,7 @@ spec:
       enabled: true
       endpoints:
         - 10.4.88.120
-        - 10.4.88.123
+        - 10.4.88.122
         - 10.4.88.124
       service:
         enabled: true
