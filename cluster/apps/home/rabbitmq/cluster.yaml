@@ -8,5 +8,6 @@ spec:
   replicas: 3
   service:
     type: LoadBalancer
+    loadBalancerIP: ${SVC_RABBITMQ_ADDR}
   persistence:
     storageClassName: local-path
