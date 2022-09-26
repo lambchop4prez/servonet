@@ -6,8 +6,17 @@ metadata:
   namespace: home
 spec:
   replicas: 3
+  resources:
+    requests:
+      cpu: 2
+      memory: 4Gi
+    limits:
+      cpu: 4
+      memory: 6Gi
   service:
     type: LoadBalancer
+    annotations:
+      metallb.universe.tf/address-pool: default
     loadBalancerIP: ${SVC_RABBITMQ_ADDR}
   persistence:
     storageClassName: local-path
