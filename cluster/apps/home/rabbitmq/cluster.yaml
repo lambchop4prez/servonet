@@ -17,6 +17,6 @@ spec:
     type: LoadBalancer
     annotations:
       metallb.universe.tf/address-pool: default
-    loadBalancerIP: ${SVC_RABBITMQ_ADDR}
+      metallb.universe.tf/loadBalancerIPs: ${SVC_RABBITMQ_ADDR}
   persistence:
     storageClassName: local-path
