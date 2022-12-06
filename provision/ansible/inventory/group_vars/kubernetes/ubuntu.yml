@@ -4,5 +4,6 @@ timezone: "America/New_York"
 
 # (list) Additional ssh public keys to add to the nodes
 ssh_authorized_keys:
-  - ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLXLbp5bWpHIQkEf/5yhLftPbp93DGMLW+8lsG+hcC5imyprs/xQ7hq7Oiok+51XZKcpom2p7zZ7uXXAdkPLz6s= tcosgriff@Rudy.local
   - ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAPXLI0p7jcdJ/x1JUbOBPpYpCLPZvu/G7cT8EO9nZ5Xm76g2Qy9p8RIHDKyu3wRsu1ZwaAFxeVbIVOiBgM/x64= tmc@Jocelyn.lan
+  - ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAFG6y3qeUdWbXiyTOEwxKAyd7srtOntd37BzEmNNAlyya5sn6zUfDsBY6Poc+reS7n4gaMLAjuCjoVNdSd8gnwttQENETn5Ej0057tsXFZW1sRh0ABpwhT32FaLe89qek8PjXp/IbEE7i45I69rlMXaf34ivRjFywBeQ10hcNp2tnjqrQ== tmc@Rudy.lan
+
