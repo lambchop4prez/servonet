@@ -24,7 +24,9 @@ spec:
       TZ: "America/Detroit"
       PUID: 1000
       PGID: 1001
-
+    service:
+      main:
+        
     ingress:
       main:
         enabled: true
